@@ -1,0 +1,126 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://background.jpg" type="Texture" id=1]
+[ext_resource path="res://scenes/S.png" type="Texture" id=2]
+[ext_resource path="res://scenes/D.png" type="Texture" id=3]
+[ext_resource path="res://scenes/A.png" type="Texture" id=4]
+[ext_resource path="res://scenes/I.png" type="Texture" id=5]
+[ext_resource path="res://scenes/U.png" type="Texture" id=6]
+[ext_resource path="res://scenes/N.png" type="Texture" id=7]
+[ext_resource path="res://scenes/E.png" type="Texture" id=8]
+[ext_resource path="res://objects/menu_button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://themes/new_dynamicfont.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Komiku_-_32_-_Love_Planet.mp3" type="AudioStream" id=11]
+
+[node name="MainTileScreen" type="Node2D"]
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 511, 383.408 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="D2" type="Sprite" parent="."]
+position = Vector2( 371.167, 91.5182 )
+scale = Vector2( 0.873787, 0.914542 )
+texture = ExtResource( 3 )
+
+[node name="N" type="Sprite" parent="."]
+position = Vector2( 297.203, 89.8393 )
+scale = Vector2( 0.914193, 0.93258 )
+texture = ExtResource( 7 )
+
+[node name="D3" type="Sprite" parent="."]
+position = Vector2( 588.746, 87.6522 )
+scale = Vector2( 0.911612, 0.917023 )
+texture = ExtResource( 3 )
+
+[node name="A" type="Sprite" parent="."]
+position = Vector2( 515.126, 88.8763 )
+scale = Vector2( 0.911612, 0.917023 )
+texture = ExtResource( 4 )
+
+[node name="E" type="Sprite" parent="."]
+position = Vector2( 443.1, 91.0967 )
+scale = Vector2( 0.911612, 0.917023 )
+texture = ExtResource( 8 )
+
+[node name="I2" type="Sprite" parent="."]
+position = Vector2( 592.512, 194.074 )
+scale = Vector2( 0.930377, 0.878515 )
+texture = ExtResource( 5 )
+
+[node name="S" type="Sprite" parent="."]
+position = Vector2( 545.993, 193.195 )
+scale = Vector2( 0.930377, 0.878515 )
+texture = ExtResource( 2 )
+
+[node name="N2" type="Sprite" parent="."]
+position = Vector2( 476.214, 194.074 )
+scale = Vector2( 0.930377, 0.878515 )
+texture = ExtResource( 7 )
+
+[node name="I" type="Sprite" parent="."]
+position = Vector2( 423.183, 194.074 )
+scale = Vector2( 0.930377, 0.878515 )
+texture = ExtResource( 5 )
+
+[node name="D" type="Sprite" parent="."]
+position = Vector2( 641.753, 193.471 )
+scale = Vector2( 0.84126, 0.898763 )
+texture = ExtResource( 3 )
+
+[node name="E2" type="Sprite" parent="."]
+position = Vector2( 712.229, 192.867 )
+scale = Vector2( 0.900787, 0.894713 )
+texture = ExtResource( 8 )
+
+[node name="U" type="Sprite" parent="."]
+position = Vector2( 203.382, 73.5512 )
+scale = Vector2( 1.37072, 1.3207 )
+texture = ExtResource( 6 )
+
+[node name="mnu_start_game" parent="." instance=ExtResource( 9 )]
+margin_left = 392.0
+margin_top = 336.0
+margin_right = 584.0
+margin_bottom = 392.0
+rect_pivot_offset = Vector2( 167.673, 24 )
+focus_neighbour_top = NodePath("../mnu_exit")
+focus_neighbour_bottom = NodePath("../mnu_settings")
+size_flags_stretch_ratio = 1.22
+custom_fonts/font = ExtResource( 10 )
+text = "Start"
+reference_path = "res://scenes/StartGameScene.tscn"
+start_focused = true
+
+[node name="mnu_settings" parent="." instance=ExtResource( 9 )]
+margin_left = 392.0
+margin_top = 408.0
+margin_right = 584.0
+margin_bottom = 464.0
+rect_pivot_offset = Vector2( 135.385, 72 )
+focus_neighbour_top = NodePath("../mnu_start_game")
+focus_neighbour_bottom = NodePath("../mnu_exit")
+custom_fonts/font = ExtResource( 10 )
+text = "Settings"
+reference_path = "res://scenes/SettingsScene.tscn"
+start_focused = true
+
+[node name="mnu_exit" parent="." instance=ExtResource( 9 )]
+margin_left = 392.0
+margin_top = 480.0
+margin_right = 584.0
+margin_bottom = 536.0
+rect_pivot_offset = Vector2( 135.385, 72 )
+focus_neighbour_top = NodePath("../mnu_settings")
+focus_neighbour_bottom = NodePath("../mnu_start_game")
+custom_fonts/font = ExtResource( 10 )
+text = "Exit"
+start_focused = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+volume_db = 0.144
+attenuation = 14766.0
