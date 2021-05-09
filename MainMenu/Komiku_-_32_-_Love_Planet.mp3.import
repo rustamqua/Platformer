@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Komiku_-_32_-_Love_Planet.mp3-1a6f685d457dcbd60f5b9c957f86eec1.mp3str"
+
+[deps]
+
+source_file="res://Komiku_-_32_-_Love_Planet.mp3"
+dest_files=[ "res://.import/Komiku_-_32_-_Love_Planet.mp3-1a6f685d457dcbd60f5b9c957f86eec1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
