@@ -1,8 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Player/Skin.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/shadow.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/MainChar.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/knight1_run0000.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/knight1_run0003.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/knight1_run0001.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/knight1_run0002.png" type="Texture" id=7]
+[ext_resource path="res://src/Player/robi.gd" type="Script" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "REST_POSE"
@@ -139,6 +144,19 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
 [node name="Skin" type="Position2D"]
 script = ExtResource( 1 )
 
@@ -152,7 +170,11 @@ anims/spawn = SubResource( 4 )
 scale = Vector2( 0.374978, 0.356176 )
 texture = ExtResource( 2 )
 
-[node name="robi" type="Sprite" parent="."]
-position = Vector2( -5.47972, -128.483 )
-scale = Vector2( 1.69368, 1.45639 )
-texture = ExtResource( 3 )
+[node name="robi" type="AnimatedSprite" parent="."]
+position = Vector2( -4.76837e-07, -142.23 )
+scale = Vector2( 1.694, 1.6 )
+frames = SubResource( 5 )
+animation = "Run"
+frame = 3
+playing = true
+script = ExtResource( 8 )

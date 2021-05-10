@@ -5,6 +5,8 @@ Delegates movement to its parent Move state and extends it
 with state transitions
 """
 
+signal playeredMoved(isForward)
+
 func unhandled_input(event: InputEvent) -> void:
 	var move: = get_parent()
 	move.unhandled_input(event)

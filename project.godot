@@ -50,9 +50,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GDQuest Platformer Character Controller (final)"
-run/main_scene="res://src/Main/Game.tscn"
-config/icon="res://icon.png"
+config/name="Undead Inside"
+run/main_scene="res://src/Menu/scenes/MainTileScreen.tscn"
+config/icon="res://assets/sprites/hook.png"
 
 [autoload]
 

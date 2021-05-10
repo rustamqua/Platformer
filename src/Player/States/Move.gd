@@ -15,6 +15,7 @@ var max_speed: = max_speed_default
 var velocity: = Vector2.ZERO
 
 
+
 func _on_Hook_hooked_onto_target(target_global_position: Vector2) -> void:
 	var to_target: Vector2 = target_global_position - owner.global_position
 	if owner.is_on_floor() and to_target.y > 0.0:
